@@ -50,6 +50,10 @@
 				<ows:UpperCorner>180.0 90.0</ows:UpperCorner>
 			</ows:WGS84BoundingBox> 
 			<ows:Identifier>BlueMarble</ows:Identifier>
+			<ows:BoundingBox crs="urn:ogc:def:crs:EPSG::5041">
+				<ows:LowerCorner>-1.4440759350252E7 -1.4440759350252E7</ows:LowerCorner>
+				<ows:UpperCorner>1.8440759350252E7 1.8440759350252E7</ows:UpperCorner>
+			</ows:BoundingBox>
 			<Style isDefault="true">
 				<ows:Title>default</ows:Title>
 				<ows:Abstract>default</ows:Abstract>
