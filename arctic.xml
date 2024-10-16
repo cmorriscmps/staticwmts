@@ -17,7 +17,7 @@
 		<ows:Operation name="GetCapabilities">
 			<ows:DCP>
 				<ows:HTTP>
-					<ows:Get xlink:href="https://raw.githubusercontent.com/cmorriscmps/staticwmts/refs/heads/main/arctic.xmll">
+					<ows:Get xlink:href="https://raw.githubusercontent.com/cmorriscmps/staticwmts/refs/heads/main/arctic.xml">
 						<ows:Constraint name="GetEncoding"> 
 							<ows:AllowedValues> 
 								<ows:Value>KVP</ows:Value>
