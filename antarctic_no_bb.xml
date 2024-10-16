@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Capabilities xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0" updateSequence="0">
+	<ows:ServiceIdentification>
+		<ows:Title>Static Antarctic Tile Server (No BB)</ows:Title>
+		<ows:Abstract>Static Antarctic Tile Server (No BB)</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>static</ows:Keyword>
+			<ows:Keyword>polar</ows:Keyword>
+			<ows:Keyword>antarctic</ows:Keyword>
+		</ows:Keywords>
+		<ows:ServiceType>WMTS</ows:ServiceType>
+		<ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+		<ows:Fees>None</ows:Fees>
+		<ows:AccessConstraints>None</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="https://raw.githubusercontent.com/cmorriscmps/staticwmts/refs/heads/main/antarctic.xml">
+						<ows:Constraint name="GetEncoding"> 
+							<ows:AllowedValues> 
+								<ows:Value>KVP</ows:Value>
+							</ows:AllowedValues>
+						</ows:Constraint>
+					</ows:Get>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="GetTile">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="https://raw.githubusercontent.com/cmorriscmps/staticwmts/refs/heads/main/antarctic.jpg">
+						<ows:Constraint name="GetEncoding"> 
+							<ows:AllowedValues> 
+								<ows:Value>KVP</ows:Value>
+							</ows:AllowedValues>
+						</ows:Constraint>
+					</ows:Get>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<Contents> 
+		<Layer>
+			<ows:Title>BlueMarble Antarctic (No BB)</ows:Title>
+			<ows:Abstract>N/A</ows:Abstract>
+			<ows:WGS84BoundingBox>
+				<ows:LowerCorner>-180.0 -90.0</ows:LowerCorner>
+				<ows:UpperCorner>180.0 90.0</ows:UpperCorner>
+			</ows:WGS84BoundingBox> 
+			<ows:Identifier>BlueMarble</ows:Identifier>
+			<Style isDefault="true">
+				<ows:Title>default</ows:Title>
+				<ows:Abstract>default</ows:Abstract>
+				<ows:Identifier>default</ows:Identifier>
+			</Style> 
+			<Format>image/jpeg</Format>
+			<TileMatrixSetLink>
+				<TileMatrixSet>UPSAntarcticWGS84Quad</TileMatrixSet>
+			</TileMatrixSetLink>
+		</Layer> 
+		<TileMatrixSet>
+			<ows:Identifier>UPSAntarcticWGS84Quad</ows:Identifier>
+			<ows:BoundingBox crs="urn:ogc:def:crs:EPSG::5042">
+				<ows:LowerCorner>-1.4440759350252E7 -1.4440759350252E7</ows:LowerCorner>
+				<ows:UpperCorner>1.8440759350252E7 1.8440759350252E7</ows:UpperCorner>
+			</ows:BoundingBox> 
+			<ows:SupportedCRS>urn:ogc:def:crs:EPSG::5042</ows:SupportedCRS>
+			<TileMatrix>
+				<ows:Identifier>0</ows:Identifier>
+				<ScaleDenominator>458726544.371</ScaleDenominator>
+				<TopLeftCorner>-1.44407593502520E+07 1.84407593502520E+07</TopLeftCorner>
+				<TileWidth>256</TileWidth>
+				<TileHeight>256</TileHeight>
+				<MatrixWidth>1</MatrixWidth>
+				<MatrixHeight>1</MatrixHeight>
+			</TileMatrix>
+		</TileMatrixSet>
+	</Contents> 
+</Capabilities>
